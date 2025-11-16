@@ -120,11 +120,452 @@ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % print("Hello ASDT world with stas
 zsh: unknown file attribute: H
 vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % nano hello.py
 
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git status
+git diff
+
+On branch feature/hello_world_asdt
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Terminal Saved Output.txt
+	hello.p yes
+
+nothing added to commit but untracked files present (use "git add" to track)
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % mv "hello.p yes" hello.py
+
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % ls
+
+README.md			hello.py
+Terminal Saved Output.txt
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git add hello.py
+git commit -m "Modify hello.py to 'Hello ASDT world with stashing'"
+
+[feature/hello_world_asdt 29c949f] Modify hello.py to 'Hello ASDT world with stashing'
+ 1 file changed, 1 insertion(+)
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git push origin feature/hello_world_asdt
+
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bassima0022u/ASDT-2.git
+   a360613..29c949f  feature/hello_world_asdt -> feature/hello_world_asdt
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git add "Terminal Saved Output.txt"
+git commit -m "Add terminal output file"
+git push
+
+[feature/hello_world_asdt 266eec4] Add terminal output file
+ 1 file changed, 147 insertions(+)
+ create mode 100644 Terminal Saved Output.txt
+fatal: The current branch feature/hello_world_asdt has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/hello_world_asdt
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % print("Hello ASDT world with stashing")
+
+zsh: unknown file attribute: H
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % nano hello.py
+
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git status
+git diff
+
+On branch feature/hello_world_asdt
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Terminal Saved Output.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+diff --git a/Terminal Saved Output.txt b/Terminal Saved Output.txt
+index 42e7598..0ecf721 100644
+--- a/Terminal Saved Output.txt 
++++ b/Terminal Saved Output.txt 
+@@ -120,8 +120,59 @@ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % print("Hello ASDT world with stas
+ zsh: unknown file attribute: H
+ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % nano hello.py
+ 
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git status
++git diff
+ 
+-  UW PICO 5.09                       File: hello.py                        Modified  
++On branch feature/hello_world_asdt
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++       Terminal Saved Output.txt
++       hello.p yes
++
++nothing added to commit but untracked files present (use "git add" to track)
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % mv "hello.p yes" hello.py
++
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % ls
++
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+HELP -- Press RETURN for more, or q when done...skipping...
+diff --git a/Terminal Saved Output.txt b/Terminal Saved Output.txt
+index 42e7598..0ecf721 100644
+--- a/Terminal Saved Output.txt 
++++ b/Terminal Saved Output.txt 
+@@ -120,8 +120,59 @@ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % print("Hello ASDT world with stas
+ zsh: unknown file attribute: H
+ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % nano hello.py
+ 
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git status
++git diff
+ 
+-  UW PICO 5.09                       File: hello.py                        Modified  
++On branch feature/hello_world_asdt
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++       Terminal Saved Output.txt
++       hello.p yes
++
++nothing added to commit but untracked files present (use "git add" to track)
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % mv "hello.p yes" hello.py
++
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % ls
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  ESC-U                Clear search highlighting.
+  &pattern          *  Display only matching lines.
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+...skipping...
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+HELP -- Press RETURN for more, or q when done...skipping...
+diff --git a/Terminal Saved Output.txt b/Terminal Saved Output.txt
+index 42e7598..0ecf721 100644
+--- a/Terminal Saved Output.txt 
++++ b/Terminal Saved Output.txt 
+@@ -120,8 +120,59 @@ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % print("Hello ASDT world with stas
+ zsh: unknown file attribute: H
+ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % nano hello.py
+ 
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git status
++git diff
+ 
+-  UW PICO 5.09                       File: hello.py                        Modified  
++On branch feature/hello_world_asdt
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++       Terminal Saved Output.txt
++       hello.p yes
++
++nothing added to commit but untracked files present (use "git add" to track)
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % mv "hello.p yes" hello.py
++
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % ls
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  ESC-U                Clear search highlighting.
+  &pattern          *  Display only matching lines.
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+...skipping...
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+...skipping...
+index 42e7598..0ecf721 100644
+--- a/Terminal Saved Output.txt 
++++ b/Terminal Saved Output.txt 
+@@ -120,8 +120,59 @@ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % print("Hello ASDT world with stas
+ zsh: unknown file attribute: H
+ vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % nano hello.py
+ 
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git status
++git diff
+ 
+-  UW PICO 5.09                       File: hello.py                        Modified  
++On branch feature/hello_world_asdt
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++       Terminal Saved Output.txt
++       hello.p yes
++
++nothing added to commit but untracked files present (use "git add" to track)
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % mv "hello.p yes" hello.py
++
++vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % ls
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git push origin feature/hello_world_asdt
+
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.55 KiB | 1.55 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bassima0022u/ASDT-2.git
+   29c949f..266eec4  feature/hello_world_asdt -> feature/hello_world_asdt
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % git stash branch feature/hello_world_asdt_stashing
+git push -u origin feature/hello_world_asdt_stashing
+
+No stash entries found.
+error: src refspec feature/hello_world_asdt_stashing does not match any
+error: failed to push some refs to 'https://github.com/bassima0022u/ASDT-2.git'
+vanapallivinay@Vanapallis-MacBook-Air ASDT-2 % nano hello.py
+
 
   UW PICO 5.09                       File: hello.py                        Modified  
 
 print("Hello ASDT world with stashing")
-print("Hello ASDT world")
+                         
 
 
 
